@@ -37,7 +37,7 @@ Upon launching the app for the first time, the user is given two choices:
 1. Use the device to **unlock** footage
 2. Use the device to **record** footage.
 
-#### Device storing footage:
+#### Device unlocking footage:
 
 Upon selecting this option, the device generates a random passphrase (e.g. 7
 words) that it uses as seed data to generate the private key. Both are saved to
