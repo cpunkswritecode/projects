@@ -28,7 +28,10 @@ is that can be used to decrypt the footage (or at least claim that they do not
 have posession of a device capable of decrypting / someone else has to decrypt
 it)
 
-## Potential User Flows:
+## Potential User Flows on First Launch:
+
+Either of these flows could be implemented (or both). Perhaps one would work
+better, this would probably require user testing to find out.
 
 ### 1. one device records, another device decrypts
 
@@ -63,9 +66,29 @@ unlock the footage.
 
 ### 2. single device, generated passphrase derives private key
 
-TODO
+Upon launching the device for the first time, the device will randomly generate
+a pass phrase that can be used to derive a private key. This phrase is
+displayed to the user, and they are asked to write it down and store it in a
+safe place (perhaps multiple places).
 
+After the user has confirmed they have done this, the device forgets the phrase
+and private key, and stores the public key only. The user is then able to
+record footage.
 
+#### Benefits
 
+* This method only requires a single device.
 
+#### Potential Problems
 
+* It would potentially be more easy for a user to misplace the passphrase than
+it would be to misplace an "unlocking device".
+
+## Potential Enhancements
+
+### Add additional "unlockers"
+
+The user could potentially choose multiple unlocking keys (recipients) to add
+redundancy. For example we could allow them to scan further QR codes, or to
+enter in additional passphrases, or choose from a number of pre-defined
+recipients (e.g. ACLU or some other org).
