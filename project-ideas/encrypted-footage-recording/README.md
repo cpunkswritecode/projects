@@ -30,7 +30,9 @@ it)
 
 ## Potential User Flows:
 
-### 1. 1 device records, another device decrypts
+### 1. one device records, another device decrypts
+
+![one device records, another device unlocks](flow-1.png)
 
 Upon launching the app for the first time, the user is given two choices:
 
